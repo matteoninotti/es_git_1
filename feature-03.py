@@ -11,6 +11,7 @@ os.makedirs(dir_out, exist_ok=True)
 os.makedirs(dir_in, exist_ok=True)  
 
 while True:
+        print(f"{time.strftime('%X')}: Controllo della cartella '{dir_in}'...")
 
         items = os.listdir(dir_in)
         
@@ -26,6 +27,8 @@ while True:
 
                 shutil.move(src_path, dst_path)
             print("Spostamento completato.")
+        else:
+            print("Nessun file trovato.")
             
 
         time.sleep(30)
