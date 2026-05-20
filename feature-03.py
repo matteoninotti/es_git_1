@@ -3,7 +3,6 @@ import os
 import shutil
 
 
-cdw = os.getcwd()
 dir_in = "./processing"
 dir_out = "./out"
 
