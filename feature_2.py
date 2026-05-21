@@ -3,13 +3,13 @@ import time
 from pathlib import Path
 
 
-INPUT_DIR = Path("./in")
-PROCESSING_DIR = Path("./processing")
 
+INPUT_DIR = Path("./processing")
+OUTPUT_DIR = Path("./out")
 
-def move_files_to_processing():
+def move_files_to_output() -> None:
     INPUT_DIR.mkdir(exist_ok=True)
-    PROCESSING_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR.mkdir(exist_ok=True)
 
     files = [path for path in INPUT_DIR.iterdir() if path.is_file()]
 
@@ -18,11 +18,12 @@ def move_files_to_processing():
         return
 
     for file_path in files:
-        destination = PROCESSING_DIR / file_path.name
+        destination = OUTPUT_DIR / file_path.name
         shutil.move(str(file_path), str(destination))
         print(f"Spostato {file_path} in {destination}")
 
 
+
 while True:
-    move_files_to_processing()
-    time.sleep(10)
+    move_files_to_output()
+    time.sleep(30)
