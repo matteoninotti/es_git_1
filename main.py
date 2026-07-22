@@ -14,7 +14,7 @@ def main():
     time.sleep(120)
 
     proc1.terminate()
-    proc2.terminate()   
+    proc2.terminate()
     proc3.terminate()
 
 

@@ -1,0 +1,7 @@
+name: hello
+on: push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "ciao dalla pipeline!"
