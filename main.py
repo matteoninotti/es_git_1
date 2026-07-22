@@ -1,6 +1,8 @@
 import subprocess
 import time
 
+# commento stupido solo per testare la github actions on push
+
 
 
 def main():

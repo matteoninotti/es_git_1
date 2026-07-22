@@ -2,10 +2,10 @@ import shutil
 import time
 from pathlib import Path
 
-
-
 INPUT_DIR = Path("./in")
 PROCESSING_DIR = Path("./processing")
+
+
 
 def move_files_to_processing():
     INPUT_DIR.mkdir(exist_ok=True)
